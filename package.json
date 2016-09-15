@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-transform-nite-jsx",
+  "version": "1.0.0",
+  "description": "Turn JSX into Nite arrays",
+  "main": "main.js",
+  "dependencies": {
+    "babel-types": "^6.15.0",
+    "esutils": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/manvalls/babel-plugin-transform-nite-jsx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manvalls/babel-plugin-transform-nite-jsx/issues"
+  },
+  "license": "MIT"
+}
