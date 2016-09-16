@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-nite-jsx",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Turn JSX into Nite arrays",
   "main": "main.js",
   "dependencies": {
