@@ -20,6 +20,9 @@ module.exports = function (opts) {
   return visitor;
 
   function convertJSXIdentifier(node, parent) {
+
+    if(node.name == 'frag') return t.unaryExpression('void',t.numericLiteral(0));
+
     if (t.isJSXIdentifier(node)) {
       if (node.name === "this" && t.isReferenced(node, parent)) {
         return t.thisExpression();
