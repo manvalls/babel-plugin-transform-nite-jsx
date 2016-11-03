@@ -63,7 +63,14 @@ module.exports = function (opts) {
   }
 
   function buildElementCall(path, file) {
+    var i;
+
     path.parent.children = t.react.buildChildren(path.parent);
+    for(i = 0;i < path.parent.children.length;i++){
+      if(path.parent.children[i].type == 'JSXSpreadChild'){
+        path.parent.children[i] = t.spreadElement(path.parent.children[i].expression);
+      }
+    }
 
     var tagExpr = convertJSXIdentifier(path.node.name, path.node);
     var args = [];
