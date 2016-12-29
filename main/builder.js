@@ -21,7 +21,7 @@ module.exports = function (opts) {
 
   function convertJSXIdentifier(node, parent) {
 
-    if(node.name == 'frag') return t.nullLiteral();
+    if(node.name == 'jsx') return t.nullLiteral();
 
     if (t.isJSXIdentifier(node)) {
       if (node.name === "this" && t.isReferenced(node, parent)) {
