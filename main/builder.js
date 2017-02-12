@@ -139,13 +139,8 @@ module.exports = function (opts) {
       // only one object
       attribs = objs[0];
     } else {
-      // looks like we have multiple objects
-      if (!t.isObjectExpression(objs[0])) {
-        objs.unshift(t.objectExpression([]));
-      }
-
-      // spread it
-      attribs = t.callExpression(file.addHelper("extends"), objs);
+      objs.unshift(t.nullLiteral());
+      attribs = t.arrayExpression(objs);
     }
 
     return attribs;
